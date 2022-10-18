@@ -1,0 +1,30 @@
+{
+	"total_point" : 2500,
+	"prev_pointsM" : 450,
+	"now_pointsM" : 248,
+	"total_pointsU" : 0,
+	"pre_pointU" : 0,
+	"main_pointU" : 0,
+	"after_pointU" : 0,
+	"HWon_pointU" : 0,
+	"HWoff_pointU" : 0,
+	"prev_M_rank":1,
+	"Ranks": [
+		{
+			"name": "Jenny", 
+			"pointM": 50
+		},
+		{
+			"name": "Ethan", 
+			"pointM": 45
+		},
+		{
+			"name": "Elli", 
+			"pointM": 35
+		},
+		{
+			"name": "Tommy", 
+			"pointM": 30
+		}
+	]
+}

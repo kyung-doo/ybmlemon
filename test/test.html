@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style.css"></link>
+	<script type="text/javascript" src="https://unpkg.com/dateformat@3.0.3/lib/dateformat.js"></script>
+	<title>화상웹솔루션 - SR On-Class</title>
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="container">
+			<h1 class="top-title">화상웹솔루션<span>SR On-Class</span></h1>
+
+			<div class="main-box">
+				<dl>
+					<dt>룸번호</dt>
+					<dd>
+						<input type="text" name="roomNum" value="TestRoom">
+						<span class="guide-text">룸이 있는 경우 참가, 없을경우 생성 후 참가, 룸 최대인원 4명</span>
+					</dd>
+				</dl>
+				<div class="cell">
+					<dl>
+						<dt>수업시작 시간</dt>
+						<dd>
+							<input name="startDate" type="date">
+							<input name="startTime" type="time">
+						</dd>
+					</dl>
+					<dl>
+						<dt style="padding-left: 25px;width: auto">레벨 설정</dt>
+						<dd>
+							<div class="select-con">
+								<select name="level">
+									<option value="1">L.1</option>
+									<option value="2">L.2</option>
+									<option value="3">L.3</option>
+									<option value="4">L.4</option>
+									<option value="5">L.5</option>
+									<option value="6">L.6</option>
+									<option value="7">L.7</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt style="padding-left: 25px;width: auto">데이 설정</dt>
+						<dd>
+							<div class="select-con">
+								<select name="day">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+									<option value="32">32</option>
+									<option value="33">33</option>
+									<option value="34">34</option>
+									<option value="35">35</option>
+									<option value="36">36</option>
+									<option value="37">37</option>
+									<option value="38">38</option>
+									<option value="39">39</option>
+									<option value="40">40</option>
+									<option value="41">41</option>
+									<option value="42">42</option>
+									<option value="43">43</option>
+									<option value="44">44</option>
+									<option value="45">45</option>
+									<option value="46">46</option>
+									<option value="47">47</option>
+									<option value="48">48</option>
+									<option value="49">49</option>
+									<option value="50">50</option>
+									<option value="51">51</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="cell">
+					<dl>
+						<dt>파트 설정</dt>
+						<dd>
+							<label>
+								<input type="radio" name="part" value="R" checked>
+								<span>R</span>
+							</label>
+							<label>
+								<input type="radio" name="part" value="S">
+								<span>S</span>
+							</label>
+						</dd>
+					</dl>
+					<dl>
+						<dt>스터디 모드</dt>
+						<dd>
+							<label>
+								<input type="radio" name="studyMode" value="study" checked>
+								<span>study</span>
+							</label>
+							<label>
+								<input type="radio" name="studyMode" value="free">
+								<span>free</span>
+							</label>
+						</dd>
+					</dl>
+				</div>
+				<button class="send-btn" type="button" onclick="sendApi()">적용하기</button>
+			</div>
+
+			<div class="btn-con">
+				<button onclick="clickBtn('teacherKT', 'KT', '김선생')">
+					<div class="en kt">KT</div>
+					<div class="ko">한국 선생님</div>
+				</button>
+				<button onclick="clickBtn('teacherFT', 'FT', '필선생')">
+					<div class="en ft">FT</div>
+					<div class="ko">필리핀 선생님</div>
+				</button>
+				<button onclick="clickBtn('hakseng', 'ST', '김학생')">
+					<div class="en st">ST</div>
+					<div class="ko">학생(홈)</div>
+				</button>
+				<button onclick="clickBtn('hakseng', 'ST', '김학생', true)">
+					<div class="en st">ST</div>
+					<div class="ko">학생(수업)</div>
+				</button>
+				<button onclick="clickBtn('teacherOB', 'OB', '옵선생')">
+					<div class="en ob">OB</div>
+					<div class="ko">관전 선생님</div>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var roomInput = document.querySelector('input[name="roomNum"]');
+		var startDateInput = document.querySelector('input[name="startDate"]');
+		var startTimeInput = document.querySelector('input[name="startTime"]');
+		var levelSelect = document.querySelector('select[name="level"]');
+		var daySelect = document.querySelector('select[name="day"]');
+		
+		var openWin = {}
+
+
+		var date = new Date();
+		var currentDate = dateFormat(date, 'yyyy-mm-dd')
+		var currentTime = dateFormat(date, 'HH:MM')
+		startDateInput.value = currentDate;
+		startTimeInput.value = currentTime;
+
+
+		function sendApi () {
+			var part = document.querySelector('input[name="part"]:checked');
+			fetch(`https://ybmlemon.com/api/LM_lms/chgPlan?ros=${part.value}&ymd=${startDateInput.value}&btm=${startTimeInput.value}&lvl=${levelSelect.value}&day=${daySelect.value}`)
+			.then(() => {
+				alert('적용 되었습니다.');
+			});
+		}
+
+
+		function clickBtn(id, group, name, study) {
+			var part = document.querySelector('input[name="part"]:checked');
+			var studyMode = document.querySelector('input[name="studyMode"]:checked');
+			var roomNumber = roomInput.value;
+			var classStartTime = startDateInput.value + " " + startTimeInput.value;
+			var w = Math.min(screen.width, 1920);
+			var h = Math.min(screen.height, 1080);
+			var left = (screen.width - w);
+			var top = 0
+			var url = '/LM_viewer/#/';
+			if (group !== "ST") {
+				url = '/LM_viewer/#/study';
+			} else {
+				if (study) url = '/LM_viewer/#/study';
+			}
+			
+			var data = {
+				pcd_seq: part.value === 'R' ? '443' : '434',
+				mem_grps: [
+					{
+						type: 'KT',
+						id: 'teacherKT',
+						name: '김선생',
+						me: group === 'KT'
+					},
+					{
+						type: 'FT',
+						id: 'teacherFT',
+						name: '필선생',
+						me: group === 'FT'
+					},
+					{
+						type: 'ST',
+						id: 'hakseng',
+						name: '김학생',
+						me: group === 'ST'
+					},
+					{
+						type: 'OB',
+						id: 'teacherOB',
+						name: '옵선생',
+						me: group === 'OB'
+					}
+				],
+				room_number: roomNumber,
+				server_time: dateFormat(new Date(), 'yyyy-mm-dd HH:MM:ss'),
+				study_mode: studyMode.value,
+				is_test: true
+			}
+
+			function getViewerInfo  ( e ) {
+				if(e.data.msg && e.data.msg === "getViewerInfo") {
+					openWin[e.data.id].postMessage({msg: 'viewerInfo', data: JSON.stringify(data)}, "*");
+				} else if(e.data.msg && e.data.msg === "close") {
+					openWin[e.data.id] = null
+					window.removeEventListener("message", getViewerInfo, false);
+				}
+			}
+
+			if (window.APP) {
+				window.APP.windowOpen(id, url, 1920, 1080, JSON.stringify(data))
+			} else {
+				if (!openWin[id]) {
+					openWin[id] = window.open(url, id, 'left=' + left + ',top=' + top + ',width=' + w + ',height=' + h + ',fullscreen=yes,location=yes');
+					window.removeEventListener("message", getViewerInfo, false);
+					window.addEventListener("message", getViewerInfo, false);
+				} else {
+					if (openWin[id].name) {
+						openWin[id].focus()
+					} else {
+						openWin[id] = window.open(url, id, 'left=' + left + ',top=' + top + ',width=' + w + ',height=' + h + ',fullscreen=yes,location=yes');
+						window.removeEventListener("message", getViewerInfo, false);
+						window.addEventListener("message", getViewerInfo, false);
+					}
+				}
+			}
+		}
+
+	</script>
+
+</body>
+
+</html>

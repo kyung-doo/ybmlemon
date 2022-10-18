@@ -1,0 +1,452 @@
+@charset "UTF-8";
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, button, textarea, p, blockquote, th, td {
+   margin: 0;
+   padding: 0; 
+ }
+ 
+ header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
+   display: block;
+   border: 0;
+   *margin: 0;
+   *padding: 0; 
+ }
+ 
+ 
+ /* html5 */
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   border-spacing: 0; 
+ }
+ 
+ fieldset, img, iframe {
+   border: 0; 
+ }
+ 
+ img {
+   vertical-align: top; 
+ }
+ 
+ ul, ol {
+   list-style: none; 
+ }
+ 
+ h1, h2, h3, h4, h5, h6 {
+   font-size: 100%; 
+ }
+ 
+ caption, legend {
+   display: none; }
+ 
+ a:link, a:visited, a:active, a:hover {
+   text-decoration: none;
+   color: #444444; }
+ 
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+   display: block; 
+ }
+ 
+ button {
+   outline: none;
+   border: none;
+   cursor: pointer;
+   font-family: "Noto Sans CJK KR", sans-serif;
+ }
+ 
+ input::-webkit-input-placeholder,
+ input::-webkit-input-placeholder,
+ input:-ms-input-placeholder,
+ textarea::-webkit-input-placeholder,
+ textarea::-webkit-input-placeholder,
+ textarea:-ms-input-placeholder {
+   color: #ccc; 
+ }
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+   position: absolute;
+   right: 0px;
+   top: 0px;
+   width: 80px;
+   height: 80px;
+   opacity: 0;
+   -webkit-appearance: none;
+}
+ 
+ input::placeholder,
+ input::-webkit-input-placeholder,
+ input:-ms-input-placeholder,
+ textarea::placeholder,
+ textarea::-webkit-input-placeholder,
+ textarea:-ms-input-placeholder {
+   color: #ccc; 
+ }
+ 
+
+ 
+ /* Skip Navigation */
+ .skipnavi {
+   position: relative;
+   margin: -1px 0 0 0;
+   z-index: 100000; 
+ }
+ 
+ .skipnavi a {
+   overflow: hidden;
+   display: block;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   text-align: center;
+   white-space: nowrap; 
+ }
+ 
+ .skipnavi a:hover, .skipnavi a:active, .skipnavi a:focus {
+   width: auto;
+   height: auto;
+   margin: 1px 0 0 0;
+   padding: 5px 10px;
+   line-height: normal;
+   background: #fff;
+   font-size: inherit;
+   color: #000;
+   font-weight: bold; 
+ }
+ 
+ /* Text Style */
+ .text-left {
+   text-align: left; 
+ }
+ 
+ .text-center {
+   text-align: center; 
+ }
+ 
+ .text-right {
+   text-align: right; 
+ }
+ 
+ /* Float Style */
+ .float-left {
+   float: left; 
+ }
+ 
+ .float-right {
+   float: right; 
+ }
+ 
+ .clear {
+   clear: both; 
+}
+ 
+ .clearfix:before,
+ .clearfix:after {
+   content: " ";
+   display: table; 
+}
+ 
+ .clearfix:after {
+   clear: both; 
+}
+ 
+ /* blind */
+ .blind {
+   visibility: hidden;
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 0;
+   font-size: 0;
+   line-height: 0; 
+}
+ 
+ 
+ .hidden {
+   display: none; 
+}
+ 
+ .al {
+   text-align: left; 
+}
+ 
+ .ac {
+   text-align: center; 
+}
+ 
+ .ar {
+   text-align: right; 
+}
+ 
+ .vt {
+   vertical-align: top; 
+}
+
+
+
+html, body {
+   background-color: #f8f8f8;
+   width: 100%;
+   height: 100%;
+}
+
+#wrap {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+}
+
+.container {
+   width :1343px;
+}
+
+
+
+.top-title {
+   font-family: 'NanumSquareRound';
+   font-weight: 600;
+   font-size: 20px;
+   color: #525c5e;
+   margin-left: 60px;
+}
+.top-title > span {
+   font-family: 'NanumSquare';
+   font-weight: 100;
+   font-size: 30px;
+   color: #525c5e;
+   margin-left: 10px;
+   position: relative;
+   top: 3px;
+}
+.main-box {
+   position: relative;
+   margin-top: 25px;
+   padding: 50px 60px 100px 60px;
+   background-color: #fff;
+   border-radius: 47px;
+   box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.main-box .cell {
+   display: flex;
+}
+.main-box dl {
+   height: 80px;
+   margin: 12px 0;
+   display: flex;
+}
+.main-box .cell dl {
+   flex: 1;
+}
+.main-box dl > dt,
+.main-box dl > dd {
+   display: flex;
+   align-items: center;
+   height: 100%;
+}
+.main-box dl > dt {
+   width: 160px;
+   font-family: 'NanumSquare';
+   font-weight: 600;
+   font-size: 24px;
+   color: #525c5e;
+}
+
+.main-box dl > dd {
+   flex: 1;
+}
+
+.main-box input[type="text"] {
+   width: 260px;
+   height: 80px;
+   box-sizing: border-box;
+   border: none;
+   border-radius: 48px;
+   padding: 27px 10px 26px 10px;
+   background-color: #e6ecec;
+   text-align: center;
+   font-family: 'NanumSquareRound';
+   font-size: 25px;
+   font-weight: 600;
+   color: #8e9191;
+   outline: none;
+}
+.main-box .guide-text {
+   font-family: 'NanumSquare';
+   font-weight: 400;
+   font-size: 20px;
+   color: #525c5e;
+   margin-left: 15px;
+   letter-spacing: -1px;
+}
+
+.main-box input[type="date"],
+.main-box input[type="time"] {
+   position: relative;
+   width: 260px;
+   height: 80px;
+   box-sizing: border-box;
+   border: none;
+   border-radius: 48px;
+   padding: 27px 30px 26px 30px;
+   background-color: #e6ecec;
+   font-family: 'NanumSquareRound';
+   font-size: 25px;
+   font-weight: 600;
+   color: #8e9191;
+   outline: none;
+}
+.main-box input[type="date"] {
+   margin-right: 15px;
+}
+.main-box input[type="date"]:after {
+   content:'';
+   position: absolute;
+   right: 22px;
+   top: 22px;
+   width: 36px;
+   height: 36px;
+   background: url('./images/date_icon.png') no-repeat;
+   pointer-events: none;
+}
+.main-box input[type="time"]:after {
+   content:'';
+   position: absolute;
+   right: 30px;
+   top: 20px;
+   width: 37px;
+   height: 39px;
+   background: url('./images/time_icon.png') no-repeat;
+   pointer-events: none;
+}
+
+.main-box select {
+   width: 120px;
+   height: 80px;
+   padding: 27px 30px 26px 30px;
+   border-radius: 40px;
+   background-color: #e6ecec;
+   font-family: 'NanumSquareRound';
+   font-size: 25px;
+   font-weight: 600;
+   color: #8e9191;
+   outline: none;
+   border: none;
+   -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.main-box .select-con {
+   position: relative;
+   width: 120px;
+   height: 80px;
+   margin-left: 20px;
+   box-sizing: border-box;
+}
+.main-box .select-con:after {
+   content:'';
+   position: absolute;
+   right: 15px;
+   top: 30px;
+   width: 28px;
+   height: 24px;
+   background: url('./images/select_icon.png') no-repeat;
+   pointer-events: none;
+}
+.main-box label {
+   position: relative;
+   width: 120px;
+   height: 80px;
+   border-radius: 40px;
+   background-color: #b0ccf1;
+   overflow: hidden;
+}
+.main-box label input {
+   opacity: 0;
+}
+.main-box label span {
+   position: absolute;
+   left: 0;
+   top: 0;
+   display: block;
+   width: 100%;
+   height: 100%;
+   font-family: 'NanumSquareRound';
+   font-weight: 400;
+   font-size: 25px;
+   color: rgba(255, 255, 255, 0.6);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.main-box label input:checked ~ span {
+   color: #fff;
+   background-color: #e3599b;
+}
+.main-box label:first-child {
+   margin-right: 20px;
+}
+.main-box .send-btn {
+   position: absolute;
+   right: 54px;
+   bottom: 43px;
+   font-family: 'NanumSquare';
+   font-size: 30px;
+   font-weight: 600;
+   color: #e3599b;
+   background: transparent;
+   border: none;
+   outline: none;
+}
+.main-box .send-btn:hover {
+   text-decoration: underline;
+}
+
+.btn-con {
+   margin-top: 32px;
+   width: 100%;
+   height: 205px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.btn-con button {
+   width: 250px;
+   height: 205px;
+   border-radius: 47px;
+   box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   transition: all 0.4s ease-out;
+}
+.btn-con button .en {
+   font-family: 'NanumSquare';
+   font-size: 35px;
+   font-weight: 900;
+}
+.btn-con button .en.kt {
+   color: #725ff5;
+}
+.btn-con button .en.ft {
+   color: #ff29f0;
+}
+.btn-con button .en.st {
+   color: #3ea3fc;
+}
+.btn-con button .en.ob {
+   color: #f29b43;
+}
+.btn-con button:hover {
+   box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.3);
+   transform: translateY(-4px);
+   z-index: 10;
+}

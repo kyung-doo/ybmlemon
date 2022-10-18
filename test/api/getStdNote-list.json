@@ -1,0 +1,127 @@
+{
+	"total": 40,
+	"page" : 1,
+	"view_num": 10,
+	"Lists": [
+		{
+			"list_id" : 1,
+			"level": 1,
+			"part": "R",
+			"day": 1,
+			"Bcode" : "Buko",
+			"Bno" : 7,
+			"Lno" : 2,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "영어숙제메모"
+		},
+		{
+			"list_id" : 2,
+			"level": 2,
+			"part": "S",
+			"day": 1,
+			"Bcode" : "PS",
+			"Bno" : 2,
+			"Lno" : 1,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "엄마한테확인받을문장들"
+		},
+		{
+			"list_id" : 3,
+			"level": 2,
+			"part": "R",
+			"day": 11,
+			"Bcode" : "Sand",
+			"Bno" : 6,
+			"Lno" : 1,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "1S-Day9 [PS 1-12]"
+		},
+		{
+			"list_id" : 4,
+			"level": 3,
+			"part": "R",
+			"day": 3,
+			"Bcode" : "Colli",
+			"Bno" : 2,
+			"Lno" : 2,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "영어숙제메모"
+		},
+		{
+			"list_id" : 5,
+			"level": 4,
+			"part": "S",
+			"day": 15,
+			"Bcode" : "Colli",
+			"Bno" : 2,
+			"Lno" : 2,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "힘들어도열심히해보자. 이번주핵심단어들."
+		},
+		{
+			"list_id" : 6,
+			"level": 1,
+			"part": "R",
+			"day": 1,
+			"Bcode" : "Buko",
+			"Bno" : 7,
+			"Lno" : 2,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "영어숙제메모"
+		},
+		{
+			"list_id" : 7,
+			"level": 2,
+			"part": "S",
+			"day": 1,
+			"Bcode" : "PS",
+			"Bno" : 2,
+			"Lno" : 1,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "엄마한테확인받을문장들"
+		},
+		{
+			"list_id" : 8,
+			"level": 2,
+			"part": "R",
+			"day": 11,
+			"Bcode" : "Sand",
+			"Bno" : 6,
+			"Lno" : 1,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "1S-Day9 [PS 1-12]"
+		},
+		{
+			"list_id" : 9,
+			"level": 3,
+			"part": "R",
+			"day": 3,
+			"Bcode" : "Colli",
+			"Bno" : 2,
+			"Lno" : 2,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "영어숙제메모"
+		},
+		{
+			"list_id" : 10,
+			"level": 4,
+			"part": "S",
+			"day": 15,
+			"Bcode" : "Colli",
+			"Bno" : 2,
+			"Lno" : 2,
+			"reg_date": "2021-07-27",
+			"modify_date": "2021-07-27",
+			"subject": "힘들어도열심히해보자. 이번주핵심단어들."
+		}
+	]
+}

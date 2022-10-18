@@ -1,0 +1,27 @@
+{
+	"Bcode": "PS",
+	"Bno": "2",
+	"Lno": "2",
+	"book_title": "My Body",
+	"Word":[
+		{"no": "1612", "en":"face", "ko":"얼굴"},
+		{"no": "1613", "en":"foot", "ko":"발"},
+		{"no": "1614", "en":"hand", "ko":"손"},
+		{"no": "1615", "en":"neck", "ko":"목"}
+	],
+
+	"Story":[],
+
+	"Conv":[
+		["71", "Wash your face.", "Okay."],
+		["69", "Wash your feet.", "Okay."],
+		["72", "Wash your hands.", "Okay."],
+		["70", "Wash your neck.", "Okay."],
+		["73", "Wash your face.", "Okay."],
+		["74", "Wash your feet.", "Okay."],
+		["75", "Wash your hands.", "Okay."],
+		["76", "Wash your neck.", "Okay."]
+	],
+
+	"scene_kor":"씻으라고 말할 때"
+}

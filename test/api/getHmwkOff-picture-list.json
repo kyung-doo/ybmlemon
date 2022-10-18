@@ -1,0 +1,97 @@
+{
+	"total": 40,
+	"page" : 1,
+	"view_num": 10,
+	"Lists": [
+		{
+			"list_id" : 1,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-27",
+			"e_date": "2021-08-04",
+			"title" : "1S-Day10 [PS 1-14]",
+			"time_out": 0,
+			"is_upload": 0
+		},
+		{
+			"list_id" : 2,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 0,
+			"is_upload": 1
+		},
+		{
+			"list_id" : 3,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 0,
+			"is_upload": 1
+		},
+		{
+			"list_id" : 4,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 1,
+			"is_upload": 0
+		},
+		{
+			"list_id" : 5,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 1,
+			"is_upload": 1
+		},
+		{
+			"list_id" : 6,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 1,
+			"is_upload": 1
+		},
+		{
+			"list_id" : 7,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 1,
+			"is_upload": 1
+		},
+		{
+			"list_id" : 8,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 1,
+			"is_upload": 1
+		},
+		{
+			"list_id" : 9,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 1,
+			"is_upload": 1
+		},
+		{
+			"list_id" : 10,
+			"type" : "1S-Day10",
+			"s_date": "2021-07-26",
+			"e_date": "2021-08-03",
+			"title" : "1R-Day10 [Buko 5-2]",
+			"time_out": 1,
+			"is_upload": 1
+		}
+	]
+}

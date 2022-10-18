@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script type="text/javascript" src="https://unpkg.com/dateformat@3.0.3/lib/dateformat.js"></script>
+	<title></title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#wrap {
+			position: relative;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		#wrap>h1 {
+			font-size: 50px;
+			padding-top: 50px;
+		}
+
+		.input-con {
+			padding-top: 100px;
+			font-size: 20px;
+		}
+
+		.input-con input::-webkit-outer-spin-button,
+		.input-con input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		.input-con input[name="roomNum"] {
+			width: 100px;
+			font-size: 20px;
+			text-align: center;
+		}
+
+		.buttons {
+			padding-top: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		.buttons button {
+			width: 200px;
+			height: 100px;
+			margin: 0 10px;
+			background-color: gray;
+			border: solid 1px #000;
+			color: #fff;
+			font-size: 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<h1>테스트 메인</h1>
+		<div class="input-con">
+			룸번호 ( 룸이 있는 경우 참가, 없을경우 생성 후 참가, 룸 최대인원 4명 ) : <input name="roomNum" type="text" value="testRoom"><br />
+			수업시작 시간 <input name="startDate" type="date"> <input name="startTime" type="time"><br />
+			파트 설정 R | S <input name="part" type="text" value="R"><br/ >
+			스터디 모드 study | free <input name="studyMode" type="text" value="study">
+			<!-- 현재 시간 설정 ('yyyy-mm-dd hh:mm') <input name="nowDate" type="text"> -->
+		</div>
+		<div>
+
+		</div>
+		<div class="buttons">
+			<button type="button" onclick="clickBtn('teacherKT', 'KT', '김선생')">KT (한국 선생님)</button>
+			<button type="button" onclick="clickBtn('teacherFT', 'FT', '필선생')">FT (필리핀 선생님)</button>
+			<button type="button" onclick="clickBtn('student1', 'ST', '김학생')">ST (학생) 홈</button>
+			<button type="button" onclick="clickBtn('student1', 'ST', '김학생', true)">ST (학생) 수업</button>
+			<button type="button" onclick="clickBtn('teacherOB', 'OB', '옵선생')">OB (관전 선생님)</button>
+		</div>
+	</div>
+
+	<script>
+		var roomInput = document.querySelector('input[name="roomNum"]');
+		var startDateInput = document.querySelector('input[name="startDate"]');
+		var startTimeInput = document.querySelector('input[name="startTime"]');
+		var part = document.querySelector('input[name="part"]');
+		var studyMode = document.querySelector('input[name="studyMode"]');
+		var openWin = {}
+
+
+		var date = new Date();
+		var currentDate = dateFormat(date, 'yyyy-mm-dd')
+		var currentTime = dateFormat(date, 'HH:MM')
+		startDateInput.value = currentDate;
+		startTimeInput.value = currentTime;
+
+
+		function clickBtn(id, group, name, study) {
+			var roomNumber = roomInput.value;
+			var classStartTime = startDateInput.value + " " + startTimeInput.value;
+			var w = Math.min(screen.width, 1920)
+			var h = Math.min(screen.height, 1080)
+			var left = (screen.width - w)
+			// var top = (screen.height - h)
+			var top = 0
+			var url = '/LM_viewer2/#/';
+			if (group !== "ST") {
+				url = '/LM_viewer2/#/study';
+			} else {
+				if (study) url = '/LM_viewer2/#/study';
+			}
+			
+			var data = {
+				pcd_seq: part.value === 'R' ? '443' : '434',
+				mem_grps: [
+					{
+						type: 'KT',
+						id: 'teacherKT',
+						// id: 11111,
+						name: '김선생',
+						me: group === 'KT'
+					},
+					{
+						type: 'FT',
+						id: 'teacherFT',
+						// id: 22222,
+						name: '필선생',
+						me: group === 'FT'
+					},
+					{
+						type: 'ST',
+						id: 'hakseng',
+						// id: 33333,
+						name: '김학생',
+						me: group === 'ST'
+					},
+					{
+						type: 'OB',
+						id: 'teacherOB',
+						// id: 44444,
+						name: '옵선생',
+						me: group === 'OB'
+					}
+				],
+				start_classUcode: part.value === 'R' ? 'L1_R1': 'L1_S1',
+				start_classtime: classStartTime,
+				room_number: roomNumber,
+				server_time: dateFormat(new Date(), 'yyyy-mm-dd HH:MM:ss'),
+				study_mode: studyMode.value,
+				is_test: true
+			}
+
+			function getViewerInfo  ( e ) {
+				if(e.data.msg && e.data.msg === "getViewerInfo") {
+					openWin[e.data.id].postMessage({msg: 'viewerInfo', data: JSON.stringify(data)}, "*");
+				} else if(e.data.msg && e.data.msg === "close") {
+					openWin[e.data.id] = null
+					window.removeEventListener("message", getViewerInfo, false);
+				}
+			}
+
+			if (window.APP) {
+				window.APP.windowOpen(id, url, 1920, 1080, JSON.stringify(data))
+			} else {
+				if (!openWin[id]) {
+					openWin[id] = window.open(url, id, 'left=' + left + ',top=' + top + ',width=' + w + ',height=' + h + ',fullscreen=yes,location=yes');
+					window.removeEventListener("message", getViewerInfo, false);
+					window.addEventListener("message", getViewerInfo, false);
+				} else {
+					if (openWin[id].name) {
+						openWin[id].focus()
+					} else {
+						openWin[id] = window.open(url, id, 'left=' + left + ',top=' + top + ',width=' + w + ',height=' + h + ',fullscreen=yes,location=yes');
+						window.removeEventListener("message", getViewerInfo, false);
+						window.addEventListener("message", getViewerInfo, false);
+					}
+				}
+			}
+		}
+
+	</script>
+
+</body>
+
+</html>

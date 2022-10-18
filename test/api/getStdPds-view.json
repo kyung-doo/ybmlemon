@@ -1,0 +1,19 @@
+{
+	"list_id": 1,
+	"level": "1",
+	"part": "R",
+	"day": 15,
+	"Bcode": "Buko",
+	"Bno": 7,
+	"Lno": 2,
+	"book_title": "Triangle Boy and Circle Girl",
+	"subject": "1R-Day15 [Buko 7-2] 자료 모음",
+	"reg_date": "2021.07.28 14:25",
+	"modify_date": "2021.07.31 13:08",
+	"comment": "submarine\n\nold\n\npretty\nmermaid\n\nblonde\n\nThe submarine is old and slow.\n그의잠수함은낡고느려요. \n She is a pretty mermaid.\n그녀는예쁜인어예요.\n\nsubmarine\n\nold\n\npretty\nmermaid\n\nblonde\n\nThe submarine is old and slow.\n그의잠수함은낡고느려요. \n She is a pretty mermaid.\n그녀는예쁜인어예요.submarine\n\nold\n\npretty\nmermaid\n\nblonde\n\nThe submarine is old and slow.\n그의잠수함은낡고느려요. \n She is a pretty mermaid.\n그녀는예쁜인어예요.",
+	"Files":	[
+		{ "path": "/uploads/pdf1.pdf" , "filename": "Sand5-2_단어모음.pdf"},
+		{ "path": "/uploads/pdf2.pdf" , "filename": "Sand5-2_스토리.pdf"},
+		{ "path": "/uploads/hwp1.hwp" , "filename": "Sand5-2_지문_스크립트.hwp"}
+	]
+}

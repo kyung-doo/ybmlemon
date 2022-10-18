@@ -1,42 +1,76 @@
 {
-  "name": "lm_viewer",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.0",
-    "@vue/cli-plugin-eslint": "^4.5.0",
-    "@vue/cli-service": "^4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+	"name": "lm_viewer",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"serve": "nodemon --watch vue.config.js --exec vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint"
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"babel-polyfill": "^6.26.0",
+		"cannon": "^0.6.2",
+		"core-js": "^3.6.5",
+		"dateformat": "^4.5.0",
+		"downloadjs": "^1.4.7",
+		"fabric": "^4.5.1",
+		"fix-webm-duration": "^1.0.0",
+		"gsap": "^3.6.0",
+		"lodash": "^4.17.20",
+		"mobile-device-detect": "^0.4.3",
+		"multistreamsmixer": "^1.2.2",
+		"node-sass": "^4.14.0",
+		"socket.io-client": "^3.1.0",
+		"swiper": "^5.4.5",
+		"three": "^0.90.0",
+		"vue": "^2.6.11",
+		"vue-awesome-swiper": "^4.1.1",
+		"vue-color": "^2.8.1",
+		"vue-fragment": "^1.5.1",
+		"vue-router": "^3.4.9",
+		"vue-smooth-scrollbar": "^0.1.2",
+		"vue-upload-component": "^2.8.22",
+		"vuedraggable": "^2.24.3",
+		"vuejs-datepicker": "^1.6.2",
+		"vuejs-paginate": "^2.1.0",
+		"vuex": "^3.6.0",
+		"whatwg-fetch": "^3.5.0"
+	},
+	"devDependencies": {
+		"@babel/plugin-proposal-class-properties": "^7.12.1",
+		"@babel/preset-env": "^7.12.11",
+		"@vue/cli-plugin-babel": "^4.5.0",
+		"@vue/cli-plugin-eslint": "^4.5.0",
+		"@vue/cli-service": "^4.5.0",
+		"babel-eslint": "^10.1.0",
+		"babel-plugin-syntax-dynamic-import": "^6.18.0",
+		"body-parser": "^1.19.0",
+		"concurrently": "^5.3.0",
+		"eslint": "^6.7.2",
+		"eslint-plugin-vue": "^6.2.2",
+		"express-formidable": "^1.2.0",
+		"multer": "^1.4.2",
+		"sass-loader": "7.3.1",
+		"vue-template-compiler": "^2.6.11"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true
+		},
+		"extends": [
+			"plugin:vue/essential",
+			"eslint:recommended"
+		],
+		"parserOptions": {
+			"parser": "babel-eslint"
+		},
+		"rules": {}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	]
 }

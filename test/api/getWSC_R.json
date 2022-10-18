@@ -1,0 +1,45 @@
+{
+	"Bcode": "Buko",
+	"Bno": "1",
+	"Lno": "2",
+	"book_title": "Noise On the Farm",
+
+	"Word": [
+		{"no": "2", "en": "duck", "ko": "오리"},
+		{"no": "3", "en": "pig", "ko": "돼지"},
+		{"no": "4", "en": "horse", "ko": "말"},
+		{"no": "5", "en": "cow", "ko": "암소"},
+		{"no": "6", "en": "duck", "ko": "오리"},
+		{"no": "7", "en": "pig", "ko": "돼지"},
+		{"no": "8", "en": "horse", "ko": "말"},
+		{"no": "9", "en": "cow", "ko": "암소"},
+		{"no": "10", "en": "duck", "ko": "오리"},
+		{"no": "11", "en": "pig", "ko": "돼지"},
+		{"no": "12", "en": "horse", "ko": "말"},
+		{"no": "13", "en": "cow", "ko": "암소"},
+		{"no": "14", "en": "duck", "ko": "오리"},
+		{"no": "15", "en": "pig", "ko": "돼지"},
+		{"no": "16", "en": "horse", "ko": "말"},
+		{"no": "17", "en": "cow", "ko": "암소"},
+		{"no": "18", "en": "pig", "ko": "돼지"},
+		{"no": "19", "en": "horse", "ko": "말"}
+	],
+
+	"Story": [
+		{"no": "20", "en": "A duck runs after the hen.", "ko": "", "iseq": "1"},
+		{"no": "21", "en": "A pig runs after the duck.", "ko": "", "iseq": "1"},
+		{"no": "22", "en": "A horse runs after the pig.", "ko": "", "iseq": "2"},
+		{"no": "23", "en": "A cow runs after the horse.", "ko": "", "iseq": "2"},
+		{"no": "24", "en": "A duck runs after the hen.", "ko": "", "iseq": "3"},
+		{"no": "25", "en": "A pig runs after the duck.", "ko": "", "iseq": "3"},
+		{"no": "26", "en": "A horse runs after the pig.", "ko": "", "iseq": "3"},
+		{"no": "27", "en": "A cow runs after the horse.", "ko": "", "iseq": "4"},
+		{"no": "28", "en": "A duck runs after the hen.", "ko": "", "iseq": "5"},
+		[
+			{"no": "29", "en": "A pig runs after the duck.", "ko": "", "iseq": "5"}, 
+			{"no": "30", "en": "A pig runs after the duck.", "ko": "", "iseq": "5"}
+		]
+	],
+
+	"Conv": []
+}

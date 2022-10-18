@@ -1,0 +1,12 @@
+{
+	"points": 35, 
+	"latest_hmwk_on": "L1_R3_passed", 
+	"latest_up" : 1,
+	"hmwk_off_ucode" : ["L1_R1", "L1_S1"],
+	"hmwk_pcd": ["121435", "12345"],
+	"RS_hmwk_off": { 
+		"R" : ["450", "L1_R2", "2021-06-14 11:55:00"], 
+		"S": ["434", "L1_S3", "2021-06-21 18:07:00"]
+	},
+	"review_hmwk_on": ["L1_R3", "L1_R2", "L1_R1"]
+}
